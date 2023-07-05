@@ -1,7 +1,8 @@
 package com.java.ruleengine.repository;
 
-import com.java.ruleengine.model.MongoRule;
+import com.java.ruleengine.model.Rule;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface MongoRuleRepository extends MongoRepository<MongoRule, Long> {
+public interface MongoRuleRepository extends MongoRepository<Rule, Long> {
+
 }

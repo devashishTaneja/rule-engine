@@ -1,6 +1,8 @@
 package com.java.ruleengine.model.interfaces;
 
 
+import com.java.ruleengine.model.Rule;
+
 import java.util.List;
 
 /**
@@ -16,7 +18,7 @@ public interface IRuleEngine {
      * </p>
      * @param rules Rules
      */
-    void setRules(List<? extends IRule> rules);
+    void setRules(List<? extends Rule> rules);
 
     /**
      * <p> Evaluate through the rules and execute actions

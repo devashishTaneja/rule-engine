@@ -6,9 +6,9 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class Condition implements ICondition {
+public class TaskCondition implements ICondition {
     @Override
-    public Boolean evaluateCondition() {
+    public Boolean evaluateCondition(Object... inputData) {
         return true;
     }
 }
