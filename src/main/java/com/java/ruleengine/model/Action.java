@@ -1,7 +1,6 @@
 package com.java.ruleengine.model;
 
 import com.java.ruleengine.model.interfaces.IAction;
-import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.mvel2.MVEL;
