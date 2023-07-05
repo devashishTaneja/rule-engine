@@ -14,7 +14,7 @@ public class ActionNode implements IActionNode {
         this.action = action;
     }
 
-    public ActionNode(List<IAction> actions) {
+    public ActionNode(List<? extends IAction> actions) {
         IAction curAction;
         ActionNode cur = this;
 

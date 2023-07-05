@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/dtaneja/Documents/repos/ms/rule-engine/src/main</OriginalElement>
+  <nodes>
+    <node x="1000.90625" y="-92.0">com.java.ruleengine.model.implementation.RuleNode</node>
+    <node x="452.0" y="-548.5">com.java.ruleengine.model.interfaces.IConditionNode</node>
+    <node x="-137.42147578633524" y="97.83556256420343">com.java.ruleengine.model.interfaces.IRuleEngine</node>
+    <node x="991.125" y="-819.0">com.java.ruleengine.model.interfaces.IAction</node>
+    <node x="719.5" y="-548.5">com.java.ruleengine.model.interfaces.IActionNode</node>
+    <node x="1285.25" y="-548.5">com.java.ruleengine.model.Action</node>
+    <node x="1053.40625" y="-548.5">com.java.ruleengine.model.interfaces.IRuleNode</node>
+    <node x="396.8475353177125" y="-92.0">com.java.ruleengine.model.implementation.ConditionNode</node>
+    <node x="157.0" y="-651.0">com.java.ruleengine.model.Condition</node>
+    <node x="682.0" y="-92.0">com.java.ruleengine.model.implementation.ActionNode</node>
+    <node x="-137.42147578633524" y="222.83556256420343">com.java.ruleengine.model.implementation.SimpleRuleEngine</node>
+    <node x="1285.25" y="-819.0">com.java.ruleengine.model.interfaces.IRule</node>
+    <node x="684.859375" y="-830.0">com.java.ruleengine.model.interfaces.INode</node>
+    <node x="240.40625" y="-819.0">com.java.ruleengine.model.interfaces.ICondition</node>
+    <node x="1612.46452321088" y="-695.0">com.java.ruleengine.model.implementation.Rule</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.java.ruleengine.model.interfaces.IConditionNode" target="com.java.ruleengine.model.interfaces.INode" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="534.5" y="-715.0" />
+      <point x="770.859375" y="-715.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.interfaces.IActionNode" target="com.java.ruleengine.model.interfaces.INode" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="790.0" y="-725.0" />
+      <point x="770.859375" y="-725.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.implementation.Rule" target="com.java.ruleengine.model.interfaces.IRule" relationship="REALIZATION">
+      <point x="0.0" y="-160.5" />
+      <point x="1804.46452321088" y="-715.0" />
+      <point x="1426.25" y="-715.0" />
+      <point x="47.0" y="26.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.interfaces.IRuleNode" target="com.java.ruleengine.model.interfaces.INode" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="1116.40625" y="-735.0" />
+      <point x="770.859375" y="-735.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.interfaces.IConditionNode" target="com.java.ruleengine.model.interfaces.ICondition" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="534.5" y="-715.0" />
+      <point x="400.90625" y="-715.0" />
+      <point x="53.5" y="26.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.interfaces.IRuleNode" target="com.java.ruleengine.model.interfaces.IRule" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="1116.40625" y="-715.0" />
+      <point x="1332.25" y="-715.0" />
+      <point x="-47.0" y="26.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.implementation.SimpleRuleEngine" target="com.java.ruleengine.model.interfaces.IRuleEngine" relationship="REALIZATION">
+      <point x="0.0" y="-72.5" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.implementation.ActionNode" target="com.java.ruleengine.model.interfaces.IActionNode" relationship="REALIZATION">
+      <point x="0.0" y="-105.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.java.ruleengine.model.Action" target="com.java.ruleengine.model.interfaces.IAction" relationship="REALIZATION">
+      <point x="0.0" y="-94.5" />
+      <point x="1413.25" y="-725.0" />
+      <point x="1149.375" y="-725.0" />
+      <point x="52.75" y="26.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.implementation.RuleNode" target="com.java.ruleengine.model.interfaces.IRuleNode" relationship="REALIZATION">
+      <point x="0.0" y="-149.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.java.ruleengine.model.interfaces.IActionNode" target="com.java.ruleengine.model.interfaces.IAction" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="790.0" y="-715.0" />
+      <point x="1043.875" y="-715.0" />
+      <point x="-52.75" y="26.5" />
+    </edge>
+    <edge source="com.java.ruleengine.model.implementation.ConditionNode" target="com.java.ruleengine.model.interfaces.IConditionNode" relationship="REALIZATION">
+      <point x="0.0" y="-105.5" />
+      <point x="524.3475353177125" y="-400.25" />
+      <point x="534.5" y="-400.25" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.java.ruleengine.model.Condition" target="com.java.ruleengine.model.interfaces.ICondition" relationship="REALIZATION">
+      <point x="0.0" y="-116.5" />
+      <point x="-53.5" y="26.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5909894974043051" showDependencies="false" x="1054.0625750684933" y="-158.03152244043758" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

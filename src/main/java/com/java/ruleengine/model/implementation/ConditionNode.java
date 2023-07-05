@@ -17,7 +17,7 @@ public class ConditionNode implements IConditionNode {
         this.condition = condition;
     }
 
-    public ConditionNode(List<ICondition> conditions) {
+    public ConditionNode(List<? extends ICondition> conditions) {
         ICondition curCondition;
         ConditionNode cur = this;
 

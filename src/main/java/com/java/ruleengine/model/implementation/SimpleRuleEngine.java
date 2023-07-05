@@ -14,7 +14,8 @@ import java.util.List;
 public class SimpleRuleEngine implements IRuleEngine {
     IRuleNode rule;
 
-    public void setRules(List<? extends Rule> rules) {
+    public void setRules(List<? extends RuleDocument> ruleDocuments) {
+        List<? extends Rule> rules = ruleDocuments.stream().map(ruleDocument -> new Rule(ruleDocument)).toList();
         rule = new RuleNode(rules);
     }
 
