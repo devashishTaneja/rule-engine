@@ -1,11 +1,13 @@
 package com.java.ruleengine.model;
 
 import com.java.ruleengine.model.interfaces.IAction;
-import com.java.ruleengine.model.interfaces.INode;
+import lombok.AllArgsConstructor;
 
 import java.util.Arrays;
 
-public class TaskAction implements IAction {
+@AllArgsConstructor
+public class Action implements IAction {
+    String actionStatement;
 
     @Override
     public Boolean execute(Object... args) {
