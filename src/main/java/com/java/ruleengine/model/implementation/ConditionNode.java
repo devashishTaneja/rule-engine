@@ -4,18 +4,20 @@ import com.java.ruleengine.model.interfaces.IAction;
 import com.java.ruleengine.model.interfaces.ICondition;
 import com.java.ruleengine.model.interfaces.IConditionNode;
 import com.java.ruleengine.model.interfaces.INode;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class ConditionNode implements IConditionNode {
     INode next;
     ICondition condition;
 
-    ConditionNode(ICondition condition) {
+    public ConditionNode(ICondition condition) {
         this.condition = condition;
     }
 
-    ConditionNode(List<ICondition> conditions) {
+    public ConditionNode(List<ICondition> conditions) {
         ICondition curCondition;
         ConditionNode cur = this;
 
@@ -30,8 +32,14 @@ public class ConditionNode implements IConditionNode {
     }
 
     @Override
-    public Boolean evaluateCondition(Object... inputData) {
-        return true;
+    public Boolean evaluate(Object... inputData) {
+        Boolean passed = true;
+        ConditionNode curConditionNode = this;
+        while (curConditionNode != null) {
+            passed = passed && curConditionNode.getCondition().evaluate(inputData);
+            curConditionNode = (ConditionNode) curConditionNode.getNext();
+        }
+        return passed;
     }
 
     @Override

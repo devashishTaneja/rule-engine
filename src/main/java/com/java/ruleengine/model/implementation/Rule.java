@@ -1,26 +1,26 @@
-package com.java.ruleengine.model;
+package com.java.ruleengine.model.implementation;
 
 import com.java.ruleengine.model.interfaces.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.springframework.data.mongodb.core.mapping.Field;
-
-import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Getter
 @AllArgsConstructor
+@Slf4j
 public class Rule implements IRule{
     private IConditionNode conditionNode;
     private IActionNode actionNode;
     private Integer order;
+    private String description;
 
     @Override
     public void execute(Object... inputData) {
-        if(conditionNode.evaluateCondition(inputData)) actionNode.execute(inputData);
+        log.info("Executing rule : " + this.description);
+        if(conditionNode.evaluate(inputData)) actionNode.execute(inputData);
     }
 
-    @Override
     public Boolean conditionSatisfied(Object... inputData) {
-        return conditionNode.evaluateCondition(inputData);
+        return conditionNode.evaluate(inputData);
     }
 }

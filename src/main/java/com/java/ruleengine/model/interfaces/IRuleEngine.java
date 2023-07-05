@@ -1,7 +1,7 @@
 package com.java.ruleengine.model.interfaces;
 
 
-import com.java.ruleengine.model.Rule;
+import com.java.ruleengine.model.implementation.Rule;
 
 import java.util.List;
 

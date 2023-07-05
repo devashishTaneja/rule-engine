@@ -30,7 +30,13 @@ public class ActionNode implements IActionNode {
 
     @Override
     public Boolean execute(Object... args) {
-        return action.execute(args);
+        Boolean executed = true;
+        ActionNode curActionNode = this;
+        while (curActionNode != null){
+            executed = executed && curActionNode.getAction().execute(args);
+            curActionNode = (ActionNode) curActionNode.getNext();
+        }
+        return executed;
     }
 
     @Override
